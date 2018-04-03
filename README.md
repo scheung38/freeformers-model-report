@@ -15,9 +15,13 @@ Your task is to write a program that compiles an improvement report out of those
 The CSV file is chronologically sorted, items at the bottom are more recent than items at the top. For example, given this CSV file:
 
 user_id,area,attribute,grade
+
 8,technology,forward_thinking,63
+
 8,technology,forward_thinking,67
+
 9,technology,forward_thinking,70
+
 9,technology,forward_thinking,70
 
 User number 8 improved their score in the forward_thinking attribute by a total of 4. User number 9 did not improve their score. The average improvement for all users on this attribute is 2. A sample output for this CSV input could be:
