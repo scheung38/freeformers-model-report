@@ -10,7 +10,6 @@ def singleUserImprovement(user_id, area, attr):
         sys.path.append(file_dir)
         filepath = file_dir + "/modelreport.csv"
         df = pd.read_csv(filepath, delimiter=',')
-
         df8 = df[df.user_id == user_id]
         df8_tech = df8[df8.area == area]
         df8_tech_forward = df8_tech[df8_tech.attr == attr]
