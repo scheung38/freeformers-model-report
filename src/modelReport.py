@@ -3,15 +3,15 @@ import os
 import sys
 import numpy as np
 
-file_dir = os.path.dirname(__file__)
-sys.path.append(file_dir)
-print(file_dir)
-filepath = file_dir + "/modelreport.csv"
-
 
 def singleUserImprovement(user_id, area, attr):
+
     try:
+        file_dir = os.path.dirname(__file__)
+        sys.path.append(file_dir)
+        filepath = file_dir + "/modelreport.csv"
         df = pd.read_csv(filepath, delimiter=',')
+
         return df[df.user_id == user_id][df[df.user_id == user_id].area == area][
             df[df.user_id == user_id][df[df.user_id == user_id].area == area].attr == attr].rolling(window=2).apply(
             lambda x: x[1] - x[0])
