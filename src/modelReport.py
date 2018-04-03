@@ -18,10 +18,10 @@ def getCsv():
 def singleUserImprovement(user_id, area, attr):
     try:
         df = getCsv()
-        df8 = df[df.user_id == user_id]
-        df8_tech = df8[df8.area == area]
-        df8_tech_forward = df8_tech[df8_tech.attr == attr]
-        res = df8_tech_forward.rolling(window=2).apply(lambda x: x[1] - x[0])
+        df_user = df[df.user_id == user_id]
+        df_user_area = df_user[df_user.area == area]
+        df_user_area_attr = df_user_area[df_user_area.attr == attr]
+        res = df_user_area_attr.rolling(window=2).apply(lambda x: x[1] - x[0])
         return res
 
     except (IndexError, Exception) as e:
