@@ -4,17 +4,24 @@ import sys
 import numpy as np
 
 
-def singleUserImprovement(user_id, area, attr):
+def getCsv():
     try:
         file_dir = os.path.dirname(__file__)
         sys.path.append(file_dir)
         filepath = file_dir + "/modelreport.csv"
-        df = pd.read_csv(filepath, delimiter=',')
+        return pd.read_csv(filepath, delimiter=',')
+
+    except (FileNotFoundError, TypeError, Exception) as e:
+        print(e)
+
+
+def singleUserImprovement(user_id, area, attr):
+    try:
+        df = getCsv()
         df8 = df[df.user_id == user_id]
         df8_tech = df8[df8.area == area]
         df8_tech_forward = df8_tech[df8_tech.attr == attr]
         res = df8_tech_forward.rolling(window=2).apply(lambda x: x[1] - x[0])
-
         return res
 
     except (IndexError, Exception) as e:
