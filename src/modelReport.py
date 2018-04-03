@@ -5,7 +5,6 @@ import numpy as np
 
 
 def singleUserImprovement(user_id, area, attr):
-
     try:
         file_dir = os.path.dirname(__file__)
         sys.path.append(file_dir)
