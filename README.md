@@ -49,7 +49,8 @@ $ pytest
 Assumption is that this csv is to be executed on a local machine, no attempt was made to fully launched into distributed remote
 clusters of machines to optimize performance.
 
-
+Another assumption is that the checks are for comparing any number of users, say user_id : 8, 9 and 10, but on the same specific area and attribute, and
+not cross comparing users with different area and attributes. 
 
 ## Installation
 

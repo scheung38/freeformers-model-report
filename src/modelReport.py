@@ -29,6 +29,6 @@ def averageUsersImprovement(user_id, area, attr):
 if __name__ == '__main__':
     Test_area = "tech"
     Test_attr = "forward"
-    Test_user_id = [8, 9]
+    Test_user_id = [8, 9, 10]
 
     print(averageUsersImprovement(Test_user_id, Test_area, Test_attr))
