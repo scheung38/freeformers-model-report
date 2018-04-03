@@ -27,13 +27,6 @@ def averageUsersImprovement(user_id, area, attr):
     return np.average(acc)
 
 
-# res1 = singleUserImprovement(Test_user_id[0], Test_area, Test_attr)["grade"].iloc[-1]
-# res2 = singleUserImprovement(Test_user_id[1], Test_area, Test_attr)["grade"].iloc[-1]
-# average = (res1 + res2)/len(Test_user_id)
-# print(average)
-
-# print([acc.append(singleUserImprovement(x, Test_area, Test_attr)["grade"].iloc[-1]) for x in Test_user_id])
-
 if __name__ == '__main__':
     Test_area = "tech"
     Test_attr = "forward"
