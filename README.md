@@ -16,8 +16,11 @@ User number 8 improved their score in the forward_thinking attribute by a total 
 area,attribute,average_improvement technology,forward_thinking,2
 
 ● How to run your solution and get the report.
+
 ● How to run the automated tests for your project, if any.
+
 ● Any technological choices you made during the exercise, if any.
+
 ● Any assumptions you made during the exercise, if any.
 
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
