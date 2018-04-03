@@ -10,7 +10,14 @@ user_id,area,attr,grade
 8,tech,reverse,89
 8,art,forward,21
 9,tech,reverse,33
-
+8,art,forward,14
+8,art,reverse,20
+9,art,forward,14
+9,art,reverse,20
+8,tech,reverse,89
+8,tech,reverse,33
+9,tech,reverse,89
+9,tech,reverse,33
 
 
 

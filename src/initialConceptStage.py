@@ -32,32 +32,15 @@ print("beginning of df8_tech_forward")
 df8_tech_forward = df8_tech[df8_tech.attr == 'forward']
 print(df8_tech_forward)
 print("beginning of df8_tech_forward_rolling")
-
 print(df8_tech_forward.rolling(window=2).apply(lambda x: x[1] - x[0]))
-
-
-
 print("")
 df2 = df[df.user_id == 9]
 print("beginning of df2")
 print(df2)
 print("")
 print(df.pivot_table(index='user_id', columns=['area', 'attr'], values='grade',
-                     aggfunc='last'))  # columns=['area', 'attribute']
+                     aggfunc='last'))
 print("")
-
-# print(df.groupby('user_id', 'area', 'attribute')).agg({'grade': ['mean', 'median']})
-
-# Or export it in many ways, e.g. a list of tuples
-# tuples = [tuple(x) for x in df.values]
-
-# or export it as a list of dicts
-# dicts = df.to_dict().values()
-
-# print(tuples)
-
-# print(dicts)
-
 
 df2 = pd.DataFrame({'Age': [35, 37, 40, 29, 31, 26, 28],
                     'City': ['B', 'Ch', 'LA', 'Ch', 'B', 'B', 'Ch'],
